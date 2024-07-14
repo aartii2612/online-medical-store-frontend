@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Poppins:wght@300&display=swap');
+
+:root {
+    --blue: rgb(5, 118, 163);
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --border: .1rem solid rgba(0, 0, 0.1);
+    --outline: 0.2rem solid rgba(0, 0, 0.1);
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: #eee;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* banner geniune medicines*/
+section {
+    padding: 5rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.heading span {
+    background: rgb(5, 118, 163);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    clip-path: polygon(100% 0%, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.home {
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    background: url(../images/bg1.avif) no-repeat center center/cover;
+    padding-top: 17rem;
+    padding-bottom: 15rem;
+}
+
+.home .content {
+
+    border: 0px solid;
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h2 {
+    color: var(--black);
+    font-size: 6rem;
+}
+
+.home .content p {
+    color: var(--light-color);
+    font-size: 2rem;
+    padding: 1rem 0;
+    line-height: 5rem;
+}
+
+section div .btn {
+    border: 2px solid;
+    font-size: 2rem;
+    padding: 6px;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+section div .btn:hover {
+    background-color: var(--blue);
+    color: rgba(255, 255, 255, 0.815);
+}
+
+/* top section */
+.header {
+    border: 0px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.logo3 {
+    height: 100px;
+    width: 100px;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: rgb(5, 118, 163);
+    font-weight: bold;
+
+}
+
+.header .navbar a:hover {
+    color: green;
+    font-weight: bolder;
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    border: 0px solid;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background: #eee;
+    color: black;
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+}
+
+
+.header .icons div:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+    color: white;
+
+}
+
+.header .search-form {
+    position: absolute;
+    border: 0px solid;
+    top: -110%;
+    right: 55rem;
+    width: 50rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    top: 110%;
+    transition: 0.5s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--green);
+}
+
+/* services images */
+
+.services .box-container .box {
+    border: 0px solid red;
+    padding: 3rem 2rem;
+    background-color: white;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.services .box-container .box:hover {
+    box-shadow: 1px 1px 10px 4px var(--blue);
+}
+
+.services .box-container .box img {
+    margin: 1rem 0;
+    height: 15rem;
+}
+
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: var(--blue);
+}
+
+.services .box-container .box .btn {
+    line-height: 5rem;
+    color: var(--blue);
+}
+
+.services .box-container .box .btn:hover {
+    background-color: var(--blue);
+    color: rgba(255, 255, 255, 0.815);
+}
+
+.services .box-container {
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+#delivery {
+    width: 250px;
+    height: 250px;
+}
+
+#lab {
+    width: 250px;
+    height: 250px;
+}
+
+#payment {
+    width: 250px;
+    height: 250px;
+}
+
+/* Products section */
+.med {
+    width: 250px;
+    height: 250px;
+}
+
+.products .product-slider {
+    border: 0px solid;
+    padding: 1rem;
+}
+
+.products .product-slider:first-child {
+    margin-bottom: 2rem;
+}
+
+.products .product-slider .box {
+    border: 0px solid red;
+    background-color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.products .product-slider .box:hover {
+    box-shadow: 1px 1px 10px 4px var(--blue);
+}
+
+.products .product-slider .box img {
+    height: 20rem;
+}
+
+.products .product-slider .box h3 {
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.products .product-slider .box .price {
+    font-size: 2rem;
+    color: var(--light-color);
+    padding: 0.5rem 0;
+}
+
+.products .product-slider .box .stars i {
+    font-size: 1.7rem;
+    color: orange;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Categories section */
+
+.categories .box-container {
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.categories .box-container .box {
+    padding: 3rem 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-sizing: var(--box-shadow);
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+}
+
+.categories .box-container .box:hover {
+    box-shadow: 1px 1px 10px 4px var(--blue);
+}
+
+.categories .box-container .box img {
+    margin: 1rem 0;
+}
+
+.categories .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--blue);
+    line-height: 1.8;
+}
+
+.categories .box-container .box p {
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/* partners section */
+.partner marquee .company img {
+    margin-right: 2.5rem;
+}
+
+.med2 {
+    height: 150px;
+    width: 150px;
+}
+
+/* footer section  */
+.footer {
+    background-color: white;
+}
+
+.footer .box-container {
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+}
+
+.btn2 {
+    width: 50%;
+    border: 2px solid;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links i {
+    color: var(--blue);
+    padding-right: 0.5rem;
+}
+
+.footer .box-container .box .links:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .share a {
+    border: 0px solid;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--blue);
+    margin-left: .2rem;
+    background-color: #eee;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+    background-color: var(--blue);
+    color: rgba(255, 255, 255, 0.815);
+
+}
+
+.footer .box-container .box .email {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.footer .box-container .box .pay {
+    margin-top: 2rem;
+    height: 10rem;
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-top: var(--border);
+}
+
+.footer .credit span {
+    color: var(--blue);
+    font-weight: 900;
+}
