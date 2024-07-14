@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">  
+    <link rel="stylesheet" href="css/cart.css" type="text/css">  
+    <!-- For sliding -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/logo3.PNG" alt="logo" class="logo3">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#Services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#partner">Partners</a>
+            
+        </nav>
+
+    <div class="icons">
+        <div class="fa fa-search" id="search-btn"></div>
+        <a href="backend/login.html">
+        <div class="fa fa-user" id="login-btn"></div></a>
+    </div> 
+    <div id="cart" style="margin-right:85px;"> 
+        <i class="fa fa-shopping-cart" onclick="toggleCart()" id="cart-btn"></i>
+        <div class="cart-content" id="cartContent">
+            <ul id="cartItems"></ul>
+            <p style="font-size: medium; padding:5px;">Total: &#8377<span id="cartTotal">0.00</span></p>
+        </div>
+    </div>  
+
+    <form action="#" class="search-form">
+        <input type="search" id="search-box" placeholder="Search Here..">
+        <label for="search-box" class=" fa fa-search"></label>
+    </form>
+    </header>
+
+
+   <section class="home" id="home">
+    <div class="content">
+     <h2>GENUINE MEDICINES</h2>
+     <P>Only Sold through Licensed Pharmacies.. </P>
+     <a href="#" class="btn">Order Now</a>
+    </div>
+   </section>
+   <section class="services" id="services">
+    <h1 class="heading">
+        Our<span>Services</span>
+    </h1>
+    <div class="box-container">
+        <div class="box">
+         <img src="images/delivery.jpg" id="delivery"><br>
+         <h3>Free Delivery</h3>
+         <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="box">
+         <img src="images/lab.png" id="lab"><br>
+         <h3>Lab Test</h3>
+         <a href="#" class="btn">Book Now</a>
+        </div>
+        <div class="box">
+            <img src="images/payment.webp" id="payment"><br>
+            <h3>Easy Payments</h3>
+            <a href="#" class="btn">Pay Now</a>
+           </div>
+    </div>
+   </section>
+   <section class="products" id="products">
+    <h1 class="heading">
+        Our<span> Products</span>
+    </h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="images/shelcal.webp" alt="shelcal" class="med">
+                <h3>Shelcal 500</h3>
+                <div class="price">&#8377 116.82</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <button  onclick="addToCart('Shelcal', 116.82)" class="btn">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/evion.webp" alt="evion" class="med">
+                <h3>Evion 400 mg</h3>
+                <div class="price">&#8377 36.00</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button  onclick="addToCart('Evion', 36.00)" class="btn">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/crocin.webp" alt="crocin" class="med">
+                <h3>Crocin</h3>
+                <div class="price">&#8377 17.00</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button  onclick="addToCart('Crocin', 17.00)" class="btn">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/sinarest.jpg" alt="sinarest" class="med">
+                <h3>Sinarest</h3>
+                <div class="price">&#8377 67.08</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <button  onclick="addToCart('Sinarest', 67.08)" class="btn">Add to Cart</button>           
+             </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="images/disprin.jpg" alt="disprin" class="med">
+                <h3>Disprin</h3>
+                <div class="price">&#8377 11.20</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <button  onclick="addToCart('Disprin', 11.20)" class="btn">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/ct.jpg" alt="cetrizine" class="med">
+                <h3>Cetrizine</h3>
+                <div class="price">&#8377 17.00</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button  onclick="addToCart('Cetrizine', 17.00)" class="btn">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/sd.webp" alt="saridon" class="med">
+                <h3>Saridon</h3>
+                <div class="price">&#8377 41.90</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button  onclick="addToCart('Saridon', 41.90)" class="btn">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="images/at.webp" alt="aspirin" class="med">
+                <h3>Aspirin</h3>
+                <div class="price">&#8377 75.70</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <button  onclick="addToCart('Aspirin', 75.70)" class="btn">Add to Cart</button>
+            </div>            
+        </div>
+    </div>
+   </section>
+
+   <!-- Categories -->
+ <section class="categories" id="categories">
+    <h1 class="heading">
+        <span>Categories</span>
+    </h1> 
+<div class="box-container">
+    <div class="box">
+        <img src="images/drop.avif" alt="drop" class="med">
+        <h3>Drop</h3>
+        <p>Upto 30% off</p>
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+        <img src="images/liquid.jpg" alt="liquid" class="med">
+        <h3>Liquid</h3>
+        <p>Upto 25% off</p>
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+        <img src="images/capsule.jpg" alt="capsule" class="med">
+        <h3>Capsule</h3>
+        <p>Upto 35% off</p>
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="box">
+        <img src="images/inhaler.webp" alt="inhaler" class="med">
+        <h3>Inhaler</h3>
+        <p>Upto 45% off</p>
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+</div>
+ </section>
+
+ <!-- partner -->
+<section class="partner" id="partner">
+    <h1 class="heading">
+        Our<span>Partners</span>
+    </h1> 
+    <marquee behavior="sliding" direction="left" scrollamount="15">
+        <div class="company">
+        <img src="images/cipla.png" alt="cipla" class="med2">
+        <img src="images/piramal.png" alt="piramal" class="med2">
+        <img src="images/dabur.png" alt="dabur" class="med2">
+        <img src="images/sym.png" alt="symbiotec" class="med2">
+        <img src="images/mylan.png" alt="MyLan" class="med2">
+        <img src="images/gm.png" alt="GlenMark" class="med2">
+        </div>
+    </marquee>
+</section>
+
+<!-- footer -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <img src="images/logo3.PNG" alt="logo" class="logo3">
+            <p>Feel free to follow us on our social media handlers.All the links are given below.</p>
+            <div class="share">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#" class="links"><i class="fa fa-phone"></i> +91 6264291274</a>   
+            <a href="#" class="links"><i class="fa fa-phone"></i> +91 8103699427</a>   
+            <a href="#" class="links"><i class="fa fa-envelope"></i>medicare410@gmail.com </a>   
+            <a href="#" class="links"><i class="fa fa-map-marker"></i> Indore,India-452012</a>   
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Home</a>   
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Services</a>   
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Products</a>   
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Categories</a>   
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Partners</a>   
+            
+        </div>
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest Updates</p>
+            <input type="email" placeholder="Your email" class="email"><br>
+            <input type="submit" value="Subscribe" class="btn2"><br>
+            <img src="images/pay.jpg" alt="payment" class="pay"> 
+        </div>
+    </div>
+<div class="credit">Created by <span>Aarti Patel & Ishika Jain </span>| All Rights Reserved</div>
+
+</section>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
